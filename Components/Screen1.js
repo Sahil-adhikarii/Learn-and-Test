@@ -1,9 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import { Button, FlatList, Image, Modal, Text, TouchableOpacity, View } from "react-native"
 import { StyleSheet } from "react-native";
 
 
 const Screen1 = () =>{
+
+    const navigation = useNavigation();
 
     const[model,setmodel] = useState(false);
     const data = [
@@ -40,13 +43,16 @@ const Screen1 = () =>{
             )}></FlatList>
             </View>
             
-            <View style={{width:100,}}><Button title="Click" onPress={()=>{setmodel(true)}}></Button></View>
+            <View style={{width:100,}}>
+                <Button title="Click" onPress={()=>{setmodel(true)}}></Button>
+                <Button title="Screen2" onPress={()=>{navigation.navigate("scren2")}}></Button>
+            </View>
             
 
             <Modal animationType="fade" visible={model} transparent={true}>
                 <View style = {{flex:2,alignItems:"center",justifyContent:"flex-end",backgroundColor:"rgba(0,0,0,0.5)"}}>
                     <TouchableOpacity onPress={()=>{setmodel(false)}} style = {{flex:1,width:"100%"}}></TouchableOpacity>
-                    <View style = {{backgroundColor:"white",width:"98%",height:"35%",borderTopLeftRadius:25,borderTopRightRadius:25,justifyContent:"center",alignItems:"center"}}>
+                    <View style = {{backgroundColor:"white",width:"100%",height:"35%",borderTopLeftRadius:25,borderTopRightRadius:25,justifyContent:"center",alignItems:"center"}}>
                         <Text>Radiant College </Text>
                     </View>
                 </View>
@@ -62,8 +68,10 @@ export default Screen1;
 
 const sty = StyleSheet.create({
     body:{
+        flex:1,
         alignItems:"center",
-        justifyContent:"center"
+        justifyContent:"center",
+        backgroundColor:"royalblue"
     },
     box:{
         backgroundColor:"white",
