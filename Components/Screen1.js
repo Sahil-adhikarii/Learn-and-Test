@@ -6,7 +6,7 @@ import { StyleSheet } from "react-native";
 
 const Screen1 = () =>{
 
-    const navigation = useNavigation();
+    // const navigation = useNavigation();
 
     const[model,setmodel] = useState(false);
     const data = [
@@ -45,7 +45,7 @@ const Screen1 = () =>{
             
             <View style={{width:100,}}>
                 <Button title="Click" onPress={()=>{setmodel(true)}}></Button>
-                <Button title="Screen2" onPress={()=>{navigation.navigate("scren2")}}></Button>
+                {/* <Button title="Screen2" onPress={()=>{navigation.navigate("scren2")}}></Button> */}
             </View>
             
 

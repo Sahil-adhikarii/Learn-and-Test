@@ -5,7 +5,7 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native"
 
 const Screen2=()=>{
 
-        const navigation = useNavigation();
+        // const navigation = useNavigation();
     return(
         <View style={sty.body}>
             <View style={sty.box}>
@@ -24,11 +24,11 @@ const Screen2=()=>{
                 <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
             </View>
             
-            <TouchableOpacity onPress={()=>{navigation.navigate("Home")}}>
+            {/* <TouchableOpacity onPress={()=>{navigation.goBack()}}>
                 <View style={sty.box}>
                     <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Return to Home</Text>
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
                 
             </View>
     )
