@@ -9,19 +9,19 @@ const Screen2=()=>{
     return(
         <View style={sty.body}>
             <View style={sty.box}>
-                <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
+                <Text style={{color:"white",fontSize:15,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
             </View>
             <View style={sty.box}>
-                <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
+                <Text style={{color:"white",fontSize:15,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
             </View>
             <View style={sty.box}>
-                <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
+                <Text style={{color:"white",fontSize:15,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
             </View>
             <View style={sty.box}>
-                <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
+                <Text style={{color:"white",fontSize:15,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
             </View>
             <View style={sty.box}>
-                <Text style={{color:"white",fontSize:23,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
+                <Text style={{color:"white",fontSize:15,textAlign:"center",fontWeight:"bold"}}>Radiant College</Text>
             </View>
             
             {/* <TouchableOpacity onPress={()=>{navigation.goBack()}}>
@@ -47,7 +47,7 @@ const sty = StyleSheet.create({
     },
     box:{
         backgroundColor:"royalblue",
-        width:"40%",
+        width:"auto",
         padding:30,
         borderRadius:20
     }
