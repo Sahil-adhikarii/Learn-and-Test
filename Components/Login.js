@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
 import { Image, StyleSheet, Text, View } from "react-native";
+import { Button } from "react-native";
 
 
 export default function Login(){
+    const Navigation = useNavigation();
 
     return(
         <View style={sty.body}>
@@ -9,6 +12,11 @@ export default function Login(){
                 <Image style={sty.img} source={require("../Assets/Bus.png")}/>
 
             </View>
+            <Text>
+                Login
+            </Text>
+            <Button title="Login" onPress={()=>{Navigation.navigate("main")}}/>
+            <Button title="SignUp" onPress={()=>{Navigation.navigate("signup")}}/>
         </View>
     )
 }
