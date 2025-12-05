@@ -6,7 +6,7 @@ export default function Login(){
     return(
         <View style={sty.body}>
             <View style={sty.box}>
-                <Image style={sty.img} source={require("../Assets/image.png")}/>
+                <Image style={sty.img} source={require("../Assets/Bus.png")}/>
 
             </View>
         </View>

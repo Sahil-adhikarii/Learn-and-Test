@@ -10,6 +10,7 @@ import Screen2 from "./Components/Screen2.js";
 import Screen3 from "./Components/Screen3.js";
 import Login from "./Components/Login.js";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Image } from "react-native";
 
 // const Stack = createNativeStackNavigator();       // For Stack Navigation
 // const Tab = createMaterialTopTabNavigator();      // For Tab Navigation
@@ -57,16 +58,34 @@ const App = () =>{
 
             {/* This is For Bottom Tab Navigation */}
 
-            <tab.Navigator screenOptions={
-                {headerShown:false,
-                tabBarStyle:{
-                    backgroundColor:"white",
-                    shadowColor:"#0C38F3"
-                },
+            <tab.Navigator screenOptions={{ headerShown:false,tabBarShowLabel:false}} initialRouteName="Home">
 
-                }} initialRouteName="Login">
-                <tab.Screen name="Home" component={Screen1}/>
-                <tab.Screen name="Login" component={Login}/>
+                <tab.Screen name="Home" component={Screen1} 
+                options={{tabBarIcon:({focused})=>(
+                    <View>
+                        <Image style={{width:40,height:40,resizeMode:"contain",tintColor:focused ? "black":'gray'}} source={require("./Assets/Home.png")}/>
+                    </View>
+                    )
+                    }} />
+
+                <tab.Screen name="Login" component={Login}
+                options={{
+                    tabBarIcon:({focused})=>(
+                        <View>
+                            <Image style={{width:40,height:40,resizeMode:'contain',tintColor:focused ? "black":'gray'}} source={require("./Assets/Login.png")}/>
+                        </View>
+                    )
+                }}
+                />
+
+                <tab.Screen name="screen3" component={Screen3}
+                options={{tabBarIcon:({focused})=>(
+                    <View>
+                        <Image style={{width:40,height:40,resizeMode:"contain",tintColor:focused ? "black":'gray'}} source={require("./Assets/Home.png")}/>
+                    </View>
+                    )}}
+                />
+
             </tab.Navigator>
 
             
